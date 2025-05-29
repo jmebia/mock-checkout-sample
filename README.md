@@ -1,4 +1,4 @@
-# Crypto Checkout Simulator Backend
+# Mock Checkout Simulator - Backend
 
 > by Josiah Maius S. Ebia
 
@@ -107,6 +107,6 @@ Sample payload for testing `localhost:8000/api/webhook`:
 ---
 
 ## Improvements I would make:
-- An obvious addition would be to add authentication checks/middleware for the endpoints.
-- I'd probably push the processing task to a background job queue like Laravel's queues.
-- Looking into a JavaScript framework like NestJs would be viable too if you are rebuilding the backend.
+-I'd add token-based authentication to sensitive endpoints
+- Validate incoming webhooks using signature headers to prevent spoofed or malicious requests.
+- Webhook processing should be handled using a job queue (like Laravel Queues).
