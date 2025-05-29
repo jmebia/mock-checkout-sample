@@ -53,11 +53,11 @@ DB_PASSWORD=ch3ckpo1nt_t1cket
 
 ### The APIs
 
-> Dev notes: In the checkout's method, I have a post request inside that calls for a fake coinbase api. It is commented since it will always result in an error. As of taking this exam, I also have no idea what would a coinbase payload look like so I just put an imaginary payment API payload.
+> Dev notes: In the checkout's method, I have a post request inside that calls for a fake coinbase api. It is commented out and replace with mock response variables since it will always result in an error. As of taking this exam, I also have no idea what would a coinbase payload look like so I just put an imaginary payment API payload.
 
 #### Checkout
 
-Sample request body for `localhost:8000/api/checkout`:
+Sample request body for `/api/checkout`:
 
 ```
 {
@@ -69,7 +69,7 @@ Sample request body for `localhost:8000/api/checkout`:
 
 #### Webhook
 
-Sample payload for testing `localhost:8000/api/webhook`:
+Sample payload for testing `/api/webhook`:
 
 ```
 {
@@ -107,6 +107,6 @@ Sample payload for testing `localhost:8000/api/webhook`:
 ---
 
 ## Improvements I would make:
--I'd add token-based authentication to sensitive endpoints
+- I'd add token-based authentication to sensitive endpoints
 - Validate incoming webhooks using signature headers to prevent spoofed or malicious requests.
 - Webhook processing should be handled using a job queue (like Laravel Queues).
